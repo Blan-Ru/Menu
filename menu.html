@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build-A-Burger</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>Build A Burger</h1>
+  <p>Choose how many of each ingredient you want. Then click <strong>Calculate Calories</strong>.</p>
+
+  <form action="cgi-bin/calories.cgi" method="post">
+
+    <h2>Buns</h2>
+    <table>
+      <tr>
+        <td><label for="bottom_bun">Bottom Bun (120 kcal each)</label></td>
+        <td><input type="number" id="bottom_bun" name="bottom_bun" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="top_bun">Top Bun (120 kcal each)</label></td>
+        <td><input type="number" id="top_bun" name="top_bun" value="0" min="0"></td>
+      </tr>
+    </table>
+
+    <h2>Proteins</h2>
+    <table>
+      <tr>
+        <td><label for="beef_patty">Beef Patty (280 kcal each)</label></td>
+        <td><input type="number" id="beef_patty" name="beef_patty" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="bacon">Bacon Strip (45 kcal each)</label></td>
+        <td><input type="number" id="bacon" name="bacon" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="fried_egg">Fried Egg (90 kcal each)</label></td>
+        <td><input type="number" id="fried_egg" name="fried_egg" value="0" min="0"></td>
+      </tr>
+    </table>
+
+    <h2>Toppings</h2>
+    <table>
+      <tr>
+        <td><label for="cheese">Cheese Slice (70 kcal each)</label></td>
+        <td><input type="number" id="cheese" name="cheese" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="lettuce">Lettuce Leaf (5 kcal each)</label></td>
+        <td><input type="number" id="lettuce" name="lettuce" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="tomato">Tomato Slice (10 kcal each)</label></td>
+        <td><input type="number" id="tomato" name="tomato" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="onion">Onion Ring (15 kcal each)</label></td>
+        <td><input type="number" id="onion" name="onion" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="pickle">Pickle Slice (5 kcal each)</label></td>
+        <td><input type="number" id="pickle" name="pickle" value="0" min="0"></td>
+      </tr>
+    </table>
+
+    <h2>Sauces</h2>
+    <table>
+      <tr>
+        <td><label for="ketchup">Ketchup (20 kcal per tbsp)</label></td>
+        <td><input type="number" id="ketchup" name="ketchup" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="mayo">Mayonnaise (90 kcal per tbsp)</label></td>
+        <td><input type="number" id="mayo" name="mayo" value="0" min="0"></td>
+      </tr>
+      <tr>
+        <td><label for="mustard">Mustard (10 kcal per tbsp)</label></td>
+        <td><input type="number" id="mustard" name="mustard" value="0" min="0"></td>
+      </tr>
+    </table>
+
+    <br>
+    <input type="submit" value="Calculate Calories">
+
+  </form>
+
+  <hr>
+  <p><a href="https://github.com/yossebastiands/BuildABurger" target="_blank">View source on GitHub</a></p>
+</body>
+</html>
