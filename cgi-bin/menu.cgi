@@ -6,10 +6,10 @@ form = cgi.FieldStorage()
 
 
 def get_num(field):
-value = form.getvalue(field, "0")
-if value.isdigit():
-return int(value)
-return 0
+    value = form.getvalue(field, "0")
+    if value.isdigit():
+        return int(value)
+     return 0
 
 
 bottom_bun = get_num("bottom_bun")
