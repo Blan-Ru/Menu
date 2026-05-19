@@ -2,7 +2,7 @@
 
 import cgi
 
-# Read the form
+
 form = cgi.FieldStorage()
 
 # Get each ingredient amount from the form
@@ -20,7 +20,7 @@ ketchup = int(form.getvalue("ketchup", 0))
 mayo = int(form.getvalue("mayo", 0))
 mustard = int(form.getvalue("mustard", 0))
 
-# Multiply each ingredient by its calories
+
 bottom_bun_cal = bottom_bun * 120
 top_bun_cal = top_bun * 120
 beef_patty_cal = beef_patty * 280
@@ -35,13 +35,12 @@ ketchup_cal = ketchup * 20
 mayo_cal = mayo * 90
 mustard_cal = mustard * 10
 
-# Add everything up
 total = (bottom_bun_cal + top_bun_cal + beef_patty_cal +
 bacon_cal + fried_egg_cal + cheese_cal +
 lettuce_cal + tomato_cal + onion_cal +
 pickle_cal + ketchup_cal + mayo_cal + mustard_cal)
 
-# Send the result page to the browser
+
 print("Content-Type: text/html\r\n\r\n", end="")
 
 print(f"""<!DOCTYPE html>
