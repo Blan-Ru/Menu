@@ -2,23 +2,29 @@
 
 import cgi
 
-
 form = cgi.FieldStorage()
 
-# Get each ingredient amount from the form
-bottom_bun = int(form.getvalue("bottom_bun", 0))
-top_bun = int(form.getvalue("top_bun", 0))
-beef_patty = int(form.getvalue("beef_patty", 0))
-bacon = int(form.getvalue("bacon", 0))
-fried_egg = int(form.getvalue("fried_egg", 0))
-cheese = int(form.getvalue("cheese", 0))
-lettuce = int(form.getvalue("lettuce", 0))
-tomato = int(form.getvalue("tomato", 0))
-onion = int(form.getvalue("onion", 0))
-pickle = int(form.getvalue("pickle", 0))
-ketchup = int(form.getvalue("ketchup", 0))
-mayo = int(form.getvalue("mayo", 0))
-mustard = int(form.getvalue("mustard", 0))
+
+def get_num(field):
+value = form.getvalue(field, "0")
+if value.isdigit():
+return int(value)
+return 0
+
+
+bottom_bun = get_num("bottom_bun")
+top_bun = get_num("top_bun")
+beef_patty = get_num("beef_patty")
+bacon = get_num("bacon")
+fried_egg = get_num("fried_egg")
+cheese = get_num("cheese")
+lettuce = get_num("lettuce")
+tomato = get_num("tomato")
+onion = get_num("onion")
+pickle = get_num("pickle")
+ketchup = get_num("ketchup")
+mayo = get_num("mayo")
+mustard = get_num("mustard")
 
 
 bottom_bun_cal = bottom_bun * 120
@@ -34,6 +40,7 @@ pickle_cal = pickle * 5
 ketchup_cal = ketchup * 20
 mayo_cal = mayo * 90
 mustard_cal = mustard * 10
+
 
 total = (bottom_bun_cal + top_bun_cal + beef_patty_cal +
 bacon_cal + fried_egg_cal + cheese_cal +
