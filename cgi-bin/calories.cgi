@@ -74,7 +74,7 @@ print(f"""<!DOCTYPE html>
 <h2>Total: {total} kcal</h2>
 
 <br>
-<a href="../index.html">Go Back</a>
+<a href="../menu.html">Go Back</a>
 
 </body>
 </html>
